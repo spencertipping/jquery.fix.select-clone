@@ -1,0 +1,4 @@
+Select clone bug workaround | Spencer Tipping
+Licensed under the terms of the MIT source code license
+
+Replaces jQuery's clone() method to support <select> value copying.

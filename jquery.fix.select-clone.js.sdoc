@@ -1,0 +1,19 @@
+Select value clone() bug workaround | Spencer Tipping
+Licensed under the terms of the MIT source code license
+
+Motivation.
+jQuery's clone() method fails to preserve the selection status of <select> elements. This code corrects that problem by replacing the built-in clone() with a method that preserves <select>
+values.
+
+(function (original) {
+  jQuery.fn.clone = function () {
+    var     result = original.apply (this, arguments);
+        my_selects = $(this).find('select'),
+    result_selects = result.find('select');
+
+    for (var i = 0, l = my_selects.length; i < l; ++i)
+      $(result_selects[i]).val ($(my_selects[i]).val());
+
+    return result;
+  };
+}) (jQuery.fn.clone);
