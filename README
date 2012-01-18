@@ -1,4 +1,2 @@
-Select clone bug workaround | Spencer Tipping
-Licensed under the terms of the MIT source code license
-
-Replaces jQuery's clone() method to support <select> value copying.
+NOTE! This repository is officially deprecated. You should use
+github.com/spencertipping/jquery.fix.clone instead.
